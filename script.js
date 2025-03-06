@@ -13,8 +13,9 @@ function lerJSON(){
             objJSON.opcionais.forEach(op => {
                 conteudo += "<br>Nome: " + op.nome + " | Marca: " + op.marca;
             });
+            document.getElementById("divJSON").innerHTML = conteudo
         }
     }
-    req.open("GET", "dados.json", true)
+    req.open("GET", "dados.json", true);
     req.send();
 }
