@@ -2,9 +2,14 @@
 
     header("Content-type: application/json");
 
-    if( $_REQUEST["buscar"]){
+    $local = "localhost";
+    $user = "root";
+    $senha = "";
+    $banco = "loja";
+
+    if(isset( $_REQUEST["buscar"])){
         try{
-            $conn = mysqli_connect("localhost", "root", "", "loja");
+            $conn = mysqli_connect($local, $user, $senha, $banco);
 
         if($conn) {
             $query = "SELECT * FROM produto ORDER BY nome";
@@ -14,7 +19,7 @@
                 $linhas[] = $row;
             }
             mysqli_close($conn);
-            echo '{"produtos" : ' . json_encode($linhas) . '}';
+            echo '{"produto" : ' . json_encode($linhas) . '}';
             } else {
                 echo '{"resposta" : "Erro ao conectar com o banco de dados" }';
             }
