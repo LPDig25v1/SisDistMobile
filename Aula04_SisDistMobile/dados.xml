@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<carro>
+    <marca>Jeep</marca>
+    <modelo>Compass</modelo>
+    <ano>2020</ano>
+    <motor>2.0</motor>
+    <automatico>TRUE</automatico>
+    <cores>
+        <cor>Cinza</cor>
+        <cor>Vermelho</cor>
+    </cores>
+    <opcionais>
+        <opcional>
+            <nome>ACC</nome>
+            <marca>ACC do João</marca>
+        </opcional>
+        <opcional>
+            <nome>Piloto Automático</nome>
+            <marca>Senna</marca>
+        </opcional>
+    </opcionais>
+    <placa></placa>
+</carro>
